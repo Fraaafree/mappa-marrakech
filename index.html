@@ -1,300 +1,1550 @@
-import folium
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4108bdcc82541c1a78d91486c6514979 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4108bdcc82541c1a78d91486c6514979" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4108bdcc82541c1a78d91486c6514979 = L.map(
+                "map_4108bdcc82541c1a78d91486c6514979",
+                {
+                    center: [31.63, -7.99],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
 
-# Crea la mappa centrata su Marrakech
-m = folium.Map(location=[31.63, -7.99], zoom_start=13)
+                }
+            );
 
-def create_popup_html(place_name, lat, lon):
-    """
-    Crea una stringa HTML per il popup,
-    con un link cliccabile che apre Google Maps sulle coordinate indicate.
-    """
-    gmaps_url = f"https://www.google.com/maps/search/?api=1&query={lat}%2C{lon}"
-    return f'<b>{place_name}</b><br><a href="{gmaps_url}" target="_blank">Apri su Google Maps</a>'
+            
 
-# =============================================================================
-# 1) RIAD (icone colore blue, icon='home')
-# =============================================================================
+        
+    
+            var tile_layer_44ad2e12060a7619402735d296dec256 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
 
-# Riad De Vinci & SPA
-lat, lon = 31.6345, -7.9922
-popup_html = create_popup_html("Riad De Vinci & SPA", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html, max_width=250),
-    tooltip="Riad De Vinci & SPA",
-    icon=folium.Icon(color='blue', icon='home', prefix='fa')
-).add_to(m)
+            );
+        
+    
+            tile_layer_44ad2e12060a7619402735d296dec256.addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var marker_2d5a6fba1e55f6e2c9e525953aaffd45 = L.marker(
+                [31.6345, -7.9922],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_e1cfd6b3279ac627af176942cb7753ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f45f6ef6cca905e1fab9e4412c2b0de = L.popup({
+  "maxWidth": 250,
+});
 
-# Dar Daoud
-lat, lon = 31.6312, -7.9889
-popup_html = create_popup_html("Dar Daoud", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html, max_width=250),
-    tooltip="Dar Daoud",
-    icon=folium.Icon(color='blue', icon='home', prefix='fa')
-).add_to(m)
+        
+            
+                var html_6e766bfb51725732b77e7fa0a1941391 = $(`<div id="html_6e766bfb51725732b77e7fa0a1941391" style="width: 100.0%; height: 100.0%;"><b>Riad De Vinci & SPA</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6345%2C-7.9922" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_3f45f6ef6cca905e1fab9e4412c2b0de.setContent(html_6e766bfb51725732b77e7fa0a1941391);
+            
+        
 
-# Riad 1001 couleurs
-lat, lon = 31.6374, -7.9910
-popup_html = create_popup_html("Riad 1001 couleurs", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html, max_width=250),
-    tooltip="Riad 1001 couleurs",
-    icon=folium.Icon(color='blue', icon='home', prefix='fa')
-).add_to(m)
+        marker_2d5a6fba1e55f6e2c9e525953aaffd45.bindPopup(popup_3f45f6ef6cca905e1fab9e4412c2b0de)
+        ;
 
-# Riad Minorisa
-lat, lon = 31.6318, -7.9927
-popup_html = create_popup_html("Riad Minorisa", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html, max_width=250),
-    tooltip="Riad Minorisa",
-    icon=folium.Icon(color='blue', icon='home', prefix='fa')
-).add_to(m)
+        
+    
+    
+            marker_2d5a6fba1e55f6e2c9e525953aaffd45.bindTooltip(
+                `<div>
+                     Riad De Vinci & SPA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2d5a6fba1e55f6e2c9e525953aaffd45.setIcon(icon_e1cfd6b3279ac627af176942cb7753ef);
+            
+    
+            var marker_c7fee85253fe92daefbf6483a3f7f3c9 = L.marker(
+                [31.6312, -7.9889],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_5142ee7d18c43aa563ff84a935c2325e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9f64cbb3894b509680869d1a5551d701 = L.popup({
+  "maxWidth": 250,
+});
 
-# =============================================================================
-# 2) ATTRAZIONI (icone colore red, icon='info-sign')
-# =============================================================================
+        
+            
+                var html_a48b6586174d02d30ead9b7bac3a13ee = $(`<div id="html_a48b6586174d02d30ead9b7bac3a13ee" style="width: 100.0%; height: 100.0%;"><b>Dar Daoud</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6312%2C-7.9889" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_9f64cbb3894b509680869d1a5551d701.setContent(html_a48b6586174d02d30ead9b7bac3a13ee);
+            
+        
 
-# Jemaa el-Fnaa
-lat, lon = 31.6258, -7.9891
-popup_html = create_popup_html("Jemaa el-Fnaa", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Jemaa el-Fnaa",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        marker_c7fee85253fe92daefbf6483a3f7f3c9.bindPopup(popup_9f64cbb3894b509680869d1a5551d701)
+        ;
 
-# Moschea Koutoubia
-lat, lon = 31.6215, -7.9937
-popup_html = create_popup_html("Moschea Koutoubia", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Moschea Koutoubia",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        
+    
+    
+            marker_c7fee85253fe92daefbf6483a3f7f3c9.bindTooltip(
+                `<div>
+                     Dar Daoud
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c7fee85253fe92daefbf6483a3f7f3c9.setIcon(icon_5142ee7d18c43aa563ff84a935c2325e);
+            
+    
+            var marker_9cc2c1decdb5eb2793eca83f115a811a = L.marker(
+                [31.6374, -7.991],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_5b238906ad4fe6c1a269396f01df2aa9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_285adca5ec3f788858734bb2140b53df = L.popup({
+  "maxWidth": 250,
+});
 
-# Palazzo Bahia
-lat, lon = 31.6227, -7.9810
-popup_html = create_popup_html("Palazzo Bahia", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Palazzo Bahia",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        
+            
+                var html_9eb84ac8ae2c81d02b714de901922f18 = $(`<div id="html_9eb84ac8ae2c81d02b714de901922f18" style="width: 100.0%; height: 100.0%;"><b>Riad 1001 couleurs</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6374%2C-7.991" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_285adca5ec3f788858734bb2140b53df.setContent(html_9eb84ac8ae2c81d02b714de901922f18);
+            
+        
 
-# Palazzo El Badi
-lat, lon = 31.6186, -7.9884
-popup_html = create_popup_html("Palazzo El Badi", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Palazzo El Badi",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        marker_9cc2c1decdb5eb2793eca83f115a811a.bindPopup(popup_285adca5ec3f788858734bb2140b53df)
+        ;
 
-# Giardini Majorelle
-lat, lon = 31.6372, -8.0026
-popup_html = create_popup_html("Giardini Majorelle", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Giardini Majorelle",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        
+    
+    
+            marker_9cc2c1decdb5eb2793eca83f115a811a.bindTooltip(
+                `<div>
+                     Riad 1001 couleurs
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9cc2c1decdb5eb2793eca83f115a811a.setIcon(icon_5b238906ad4fe6c1a269396f01df2aa9);
+            
+    
+            var marker_2eea3fe14b6ed754042056379b6e0a56 = L.marker(
+                [31.6318, -7.9927],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_8ea1c23c2a697fe47690ec396fee82c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f5e27ca65e55f3667e464bbfc38f06d = L.popup({
+  "maxWidth": 250,
+});
 
-# Madrasa di Ben Youssef
-lat, lon = 31.6336, -7.9879
-popup_html = create_popup_html("Madrasa di Ben Youssef", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Madrasa di Ben Youssef",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        
+            
+                var html_58622a9e24192060d51b9373a247f0f5 = $(`<div id="html_58622a9e24192060d51b9373a247f0f5" style="width: 100.0%; height: 100.0%;"><b>Riad Minorisa</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6318%2C-7.9927" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_2f5e27ca65e55f3667e464bbfc38f06d.setContent(html_58622a9e24192060d51b9373a247f0f5);
+            
+        
 
-# Tombe Saadiane
-lat, lon = 31.6163, -7.9888
-popup_html = create_popup_html("Tombe Saadiane", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Tombe Saadiane",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        marker_2eea3fe14b6ed754042056379b6e0a56.bindPopup(popup_2f5e27ca65e55f3667e464bbfc38f06d)
+        ;
 
-# Dar El Bacha
-lat, lon = 31.6333, -7.9966
-popup_html = create_popup_html("Dar El Bacha (Musée des Confluences)", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Dar El Bacha",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        
+    
+    
+            marker_2eea3fe14b6ed754042056379b6e0a56.bindTooltip(
+                `<div>
+                     Riad Minorisa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2eea3fe14b6ed754042056379b6e0a56.setIcon(icon_8ea1c23c2a697fe47690ec396fee82c4);
+            
+    
+            var marker_69df0e0dc524a41c330e3127364e22c3 = L.marker(
+                [31.6258, -7.9891],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_ad950a251f90973de48ea658293cf3a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e1e7628cc164e86199f40bd228a9b4f = L.popup({
+  "maxWidth": "100%",
+});
 
-# Museo YSL
-lat, lon = 31.6379, -8.0033
-popup_html = create_popup_html("Museo Yves Saint Laurent", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Museo YSL",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        
+            
+                var html_701b7ffad79b23c79a3aaac8b106be97 = $(`<div id="html_701b7ffad79b23c79a3aaac8b106be97" style="width: 100.0%; height: 100.0%;"><b>Jemaa el-Fnaa</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6258%2C-7.9891" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_8e1e7628cc164e86199f40bd228a9b4f.setContent(html_701b7ffad79b23c79a3aaac8b106be97);
+            
+        
 
-# La Menara
-lat, lon = 31.6082, -8.0159
-popup_html = create_popup_html("La Menara", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Giardini della Menara",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        marker_69df0e0dc524a41c330e3127364e22c3.bindPopup(popup_8e1e7628cc164e86199f40bd228a9b4f)
+        ;
 
-# Quartiere Mellah
-lat, lon = 31.6196, -7.9819
-popup_html = create_popup_html("Quartiere Mellah", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Quartiere Mellah",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        
+    
+    
+            marker_69df0e0dc524a41c330e3127364e22c3.bindTooltip(
+                `<div>
+                     Jemaa el-Fnaa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_69df0e0dc524a41c330e3127364e22c3.setIcon(icon_ad950a251f90973de48ea658293cf3a2);
+            
+    
+            var marker_5fd345484bd1b3eaf4ba08f39147ca81 = L.marker(
+                [31.6215, -7.9937],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_490a8da4d7776564d6e36f1c0d084111 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6bf033de5023a18d1324295fd8993c5b = L.popup({
+  "maxWidth": "100%",
+});
 
-# Cyber Parc Arsat Moulay Abdeslam
-lat, lon = 31.6244, -8.0016
-popup_html = create_popup_html("Cyber Parc Arsat Moulay Abdeslam", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Cyber Parc Arsat Moulay Abdeslam",
-    icon=folium.Icon(color='red', icon='info-sign')
-).add_to(m)
+        
+            
+                var html_9709fe99cc3938b65f67a44cdb9399ea = $(`<div id="html_9709fe99cc3938b65f67a44cdb9399ea" style="width: 100.0%; height: 100.0%;"><b>Moschea Koutoubia</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6215%2C-7.9937" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_6bf033de5023a18d1324295fd8993c5b.setContent(html_9709fe99cc3938b65f67a44cdb9399ea);
+            
+        
 
-# =============================================================================
-# 3) DESERTI (icone colore gray, icon='flag')
-# =============================================================================
+        marker_5fd345484bd1b3eaf4ba08f39147ca81.bindPopup(popup_6bf033de5023a18d1324295fd8993c5b)
+        ;
 
-# Deserto di Agafay
-lat, lon = 31.3075, -8.0331
-popup_html = create_popup_html("Deserto di Agafay", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Deserto di Agafay",
-    icon=folium.Icon(color='gray', icon='flag', prefix='fa')
-).add_to(m)
+        
+    
+    
+            marker_5fd345484bd1b3eaf4ba08f39147ca81.bindTooltip(
+                `<div>
+                     Moschea Koutoubia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5fd345484bd1b3eaf4ba08f39147ca81.setIcon(icon_490a8da4d7776564d6e36f1c0d084111);
+            
+    
+            var marker_d371e5165baa41302298eab65d8584cc = L.marker(
+                [31.6227, -7.981],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_3506f5aaf5b5a2f32884efd6755f649a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7656a29b4b22af2663f9a108d6343441 = L.popup({
+  "maxWidth": "100%",
+});
 
-# Zagora
-lat, lon = 30.3214, -5.8351
-popup_html = create_popup_html("Zagora", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Deserto di Zagora",
-    icon=folium.Icon(color='gray', icon='flag', prefix='fa')
-).add_to(m)
+        
+            
+                var html_ec8bbe40416750d7734a0d700ae6b0d1 = $(`<div id="html_ec8bbe40416750d7734a0d700ae6b0d1" style="width: 100.0%; height: 100.0%;"><b>Palazzo Bahia</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6227%2C-7.981" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_7656a29b4b22af2663f9a108d6343441.setContent(html_ec8bbe40416750d7734a0d700ae6b0d1);
+            
+        
 
-# Merzouga (Erg Chebbi)
-lat, lon = 31.1000, -4.0000
-popup_html = create_popup_html("Merzouga (Erg Chebbi)", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Deserto di Merzouga",
-    icon=folium.Icon(color='gray', icon='flag', prefix='fa')
-).add_to(m)
+        marker_d371e5165baa41302298eab65d8584cc.bindPopup(popup_7656a29b4b22af2663f9a108d6343441)
+        ;
 
-# =============================================================================
-# 4) RISTORANTI (icone colore green, icon='cutlery')
-# =============================================================================
+        
+    
+    
+            marker_d371e5165baa41302298eab65d8584cc.bindTooltip(
+                `<div>
+                     Palazzo Bahia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d371e5165baa41302298eab65d8584cc.setIcon(icon_3506f5aaf5b5a2f32884efd6755f649a);
+            
+    
+            var marker_805c023926f1622e7296e7fe4b33fc06 = L.marker(
+                [31.6186, -7.9884],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_73c33f3b91b1233c22041d69e753949f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_618bc78ba3fdf339c1aa479f07253d97 = L.popup({
+  "maxWidth": "100%",
+});
 
-# Nomad
-lat, lon = 31.6298, -7.9874
-popup_html = create_popup_html("Nomad (cucina marocchina rivisitata)", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Nomad",
-    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
-).add_to(m)
+        
+            
+                var html_797216f944a31ffc67920582ee733129 = $(`<div id="html_797216f944a31ffc67920582ee733129" style="width: 100.0%; height: 100.0%;"><b>Palazzo El Badi</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6186%2C-7.9884" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_618bc78ba3fdf339c1aa479f07253d97.setContent(html_797216f944a31ffc67920582ee733129);
+            
+        
 
-# Café Des Épices
-lat, lon = 31.6299, -7.9868
-popup_html = create_popup_html("Café Des Épices", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Café Des Épices",
-    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
-).add_to(m)
+        marker_805c023926f1622e7296e7fe4b33fc06.bindPopup(popup_618bc78ba3fdf339c1aa479f07253d97)
+        ;
 
-# Le Jardin
-lat, lon = 31.6320, -7.9967
-popup_html = create_popup_html("Le Jardin", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Le Jardin",
-    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
-).add_to(m)
+        
+    
+    
+            marker_805c023926f1622e7296e7fe4b33fc06.bindTooltip(
+                `<div>
+                     Palazzo El Badi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_805c023926f1622e7296e7fe4b33fc06.setIcon(icon_73c33f3b91b1233c22041d69e753949f);
+            
+    
+            var marker_b03d72ea087e1a72821bbe0dca07888c = L.marker(
+                [31.6372, -8.0026],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_fee394c7fc69e433987b2f6fc52f9901 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f90b95a35819e18fa62be57be6b04ba4 = L.popup({
+  "maxWidth": "100%",
+});
 
-# Café Clock
-lat, lon = 31.6157, -7.9891
-popup_html = create_popup_html("Café Clock (camel burger, menù creativo)", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Café Clock",
-    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
-).add_to(m)
+        
+            
+                var html_e8771e35153f373afb697a67440791ac = $(`<div id="html_e8771e35153f373afb697a67440791ac" style="width: 100.0%; height: 100.0%;"><b>Giardini Majorelle</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6372%2C-8.0026" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_f90b95a35819e18fa62be57be6b04ba4.setContent(html_e8771e35153f373afb697a67440791ac);
+            
+        
 
-# Dar Zellij
-lat, lon = 31.6391, -7.9912
-popup_html = create_popup_html("Dar Zellij (cucina tradizionale in riad storico)", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Dar Zellij",
-    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
-).add_to(m)
+        marker_b03d72ea087e1a72821bbe0dca07888c.bindPopup(popup_f90b95a35819e18fa62be57be6b04ba4)
+        ;
 
-# La Famille
-lat, lon = 31.6234, -7.9841
-popup_html = create_popup_html("La Famille (cucina vegetariana/vegana)", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="La Famille",
-    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
-).add_to(m)
+        
+    
+    
+            marker_b03d72ea087e1a72821bbe0dca07888c.bindTooltip(
+                `<div>
+                     Giardini Majorelle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b03d72ea087e1a72821bbe0dca07888c.setIcon(icon_fee394c7fc69e433987b2f6fc52f9901);
+            
+    
+            var marker_3884c5e0544f549e2170ea5aac3e6480 = L.marker(
+                [31.6336, -7.9879],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_98e50ac77d71e23b1d00336db89b8c02 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3182e012517ae1caeaf3621f221d6bba = L.popup({
+  "maxWidth": "100%",
+});
 
-# Naranj
-lat, lon = 31.6228, -7.9813
-popup_html = create_popup_html("Naranj (cucina libanese e marocchina)", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="Naranj",
-    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
-).add_to(m)
+        
+            
+                var html_2da534570e826ebd6c23e342f68322bc = $(`<div id="html_2da534570e826ebd6c23e342f68322bc" style="width: 100.0%; height: 100.0%;"><b>Madrasa di Ben Youssef</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6336%2C-7.9879" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_3182e012517ae1caeaf3621f221d6bba.setContent(html_2da534570e826ebd6c23e342f68322bc);
+            
+        
 
-# 16 Café
-lat, lon = 31.6333, -8.0104
-popup_html = create_popup_html("16 Café (pasticceria e caffè in Gueliz)", lat, lon)
-folium.Marker(
-    location=[lat, lon],
-    popup=folium.Popup(popup_html),
-    tooltip="16 Café",
-    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
-).add_to(m)
+        marker_3884c5e0544f549e2170ea5aac3e6480.bindPopup(popup_3182e012517ae1caeaf3621f221d6bba)
+        ;
 
-m
+        
+    
+    
+            marker_3884c5e0544f549e2170ea5aac3e6480.bindTooltip(
+                `<div>
+                     Madrasa di Ben Youssef
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3884c5e0544f549e2170ea5aac3e6480.setIcon(icon_98e50ac77d71e23b1d00336db89b8c02);
+            
+    
+            var marker_275be5c54e36fdc9d3783e2336e86289 = L.marker(
+                [31.6163, -7.9888],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_4eea90f342c5c4b3170eb1b76c0fb31e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f4633d1aea2264f46c73f0e3f2eee97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b03531c3a4233850e313e51f9b441fb = $(`<div id="html_0b03531c3a4233850e313e51f9b441fb" style="width: 100.0%; height: 100.0%;"><b>Tombe Saadiane</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6163%2C-7.9888" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_7f4633d1aea2264f46c73f0e3f2eee97.setContent(html_0b03531c3a4233850e313e51f9b441fb);
+            
+        
+
+        marker_275be5c54e36fdc9d3783e2336e86289.bindPopup(popup_7f4633d1aea2264f46c73f0e3f2eee97)
+        ;
+
+        
+    
+    
+            marker_275be5c54e36fdc9d3783e2336e86289.bindTooltip(
+                `<div>
+                     Tombe Saadiane
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_275be5c54e36fdc9d3783e2336e86289.setIcon(icon_4eea90f342c5c4b3170eb1b76c0fb31e);
+            
+    
+            var marker_427ef779fa0d19283a5b7a8c4a3ffea6 = L.marker(
+                [31.6333, -7.9966],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_e053035eeac142365fc1a68bd891096c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5079cb128da7d2245e110f16cd31e501 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_729b19d3d837354734e2705ab626758c = $(`<div id="html_729b19d3d837354734e2705ab626758c" style="width: 100.0%; height: 100.0%;"><b>Dar El Bacha (Musée des Confluences)</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6333%2C-7.9966" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_5079cb128da7d2245e110f16cd31e501.setContent(html_729b19d3d837354734e2705ab626758c);
+            
+        
+
+        marker_427ef779fa0d19283a5b7a8c4a3ffea6.bindPopup(popup_5079cb128da7d2245e110f16cd31e501)
+        ;
+
+        
+    
+    
+            marker_427ef779fa0d19283a5b7a8c4a3ffea6.bindTooltip(
+                `<div>
+                     Dar El Bacha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_427ef779fa0d19283a5b7a8c4a3ffea6.setIcon(icon_e053035eeac142365fc1a68bd891096c);
+            
+    
+            var marker_a9b89b485a0503158bea7c8fc8138ca1 = L.marker(
+                [31.6379, -8.0033],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_d717ac528fc46205c21b568fdcde24a5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9272331a80df02f387f8221134e0e23e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abd2356ace65f174007de9cd8b6f33e4 = $(`<div id="html_abd2356ace65f174007de9cd8b6f33e4" style="width: 100.0%; height: 100.0%;"><b>Museo Yves Saint Laurent</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6379%2C-8.0033" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_9272331a80df02f387f8221134e0e23e.setContent(html_abd2356ace65f174007de9cd8b6f33e4);
+            
+        
+
+        marker_a9b89b485a0503158bea7c8fc8138ca1.bindPopup(popup_9272331a80df02f387f8221134e0e23e)
+        ;
+
+        
+    
+    
+            marker_a9b89b485a0503158bea7c8fc8138ca1.bindTooltip(
+                `<div>
+                     Museo YSL
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a9b89b485a0503158bea7c8fc8138ca1.setIcon(icon_d717ac528fc46205c21b568fdcde24a5);
+            
+    
+            var marker_813b814a4ebc308600d922fb6394fbf4 = L.marker(
+                [31.6082, -8.0159],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_0710ff07d3f131b54181a43f22936e50 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72cf14560b4bce346526977ca174c854 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acb29fbe8f689dd20e141a458dcfd97a = $(`<div id="html_acb29fbe8f689dd20e141a458dcfd97a" style="width: 100.0%; height: 100.0%;"><b>La Menara</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6082%2C-8.0159" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_72cf14560b4bce346526977ca174c854.setContent(html_acb29fbe8f689dd20e141a458dcfd97a);
+            
+        
+
+        marker_813b814a4ebc308600d922fb6394fbf4.bindPopup(popup_72cf14560b4bce346526977ca174c854)
+        ;
+
+        
+    
+    
+            marker_813b814a4ebc308600d922fb6394fbf4.bindTooltip(
+                `<div>
+                     Giardini della Menara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_813b814a4ebc308600d922fb6394fbf4.setIcon(icon_0710ff07d3f131b54181a43f22936e50);
+            
+    
+            var marker_2c8e36a223857434267dc845da081be5 = L.marker(
+                [31.6196, -7.9819],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_0aad5905b1613d8172054b1211b4d725 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb0852711efe1a3b339ea014facd6c94 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9f149eb8ab674eddb0e6faf4b00a2f2 = $(`<div id="html_f9f149eb8ab674eddb0e6faf4b00a2f2" style="width: 100.0%; height: 100.0%;"><b>Quartiere Mellah</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6196%2C-7.9819" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_bb0852711efe1a3b339ea014facd6c94.setContent(html_f9f149eb8ab674eddb0e6faf4b00a2f2);
+            
+        
+
+        marker_2c8e36a223857434267dc845da081be5.bindPopup(popup_bb0852711efe1a3b339ea014facd6c94)
+        ;
+
+        
+    
+    
+            marker_2c8e36a223857434267dc845da081be5.bindTooltip(
+                `<div>
+                     Quartiere Mellah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2c8e36a223857434267dc845da081be5.setIcon(icon_0aad5905b1613d8172054b1211b4d725);
+            
+    
+            var marker_c85d2e2ef1d9c141c6ec2681f1a8e4d2 = L.marker(
+                [31.6244, -8.0016],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_c04fa613b4557aa9832363c1199c9d06 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_120699549dcc506f8eff7ff234664303 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab789959b0e037dbf6ae8b89d291b310 = $(`<div id="html_ab789959b0e037dbf6ae8b89d291b310" style="width: 100.0%; height: 100.0%;"><b>Cyber Parc Arsat Moulay Abdeslam</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6244%2C-8.0016" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_120699549dcc506f8eff7ff234664303.setContent(html_ab789959b0e037dbf6ae8b89d291b310);
+            
+        
+
+        marker_c85d2e2ef1d9c141c6ec2681f1a8e4d2.bindPopup(popup_120699549dcc506f8eff7ff234664303)
+        ;
+
+        
+    
+    
+            marker_c85d2e2ef1d9c141c6ec2681f1a8e4d2.bindTooltip(
+                `<div>
+                     Cyber Parc Arsat Moulay Abdeslam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c85d2e2ef1d9c141c6ec2681f1a8e4d2.setIcon(icon_c04fa613b4557aa9832363c1199c9d06);
+            
+    
+            var marker_d0420a19624b6acf6e2190a55ce0dbfa = L.marker(
+                [31.3075, -8.0331],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_ff109ffe0fea7f57bc460135805c50ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8290b94ceca59c6629cd6de934e610b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a1e801ce2b5a4b167d91356b7e4b15e = $(`<div id="html_7a1e801ce2b5a4b167d91356b7e4b15e" style="width: 100.0%; height: 100.0%;"><b>Deserto di Agafay</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.3075%2C-8.0331" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_8290b94ceca59c6629cd6de934e610b1.setContent(html_7a1e801ce2b5a4b167d91356b7e4b15e);
+            
+        
+
+        marker_d0420a19624b6acf6e2190a55ce0dbfa.bindPopup(popup_8290b94ceca59c6629cd6de934e610b1)
+        ;
+
+        
+    
+    
+            marker_d0420a19624b6acf6e2190a55ce0dbfa.bindTooltip(
+                `<div>
+                     Deserto di Agafay
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0420a19624b6acf6e2190a55ce0dbfa.setIcon(icon_ff109ffe0fea7f57bc460135805c50ef);
+            
+    
+            var marker_70700cb267498e678dcc5d01c032baa2 = L.marker(
+                [30.3214, -5.8351],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_9e37eabef39c10169a146b97a32e3ea0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6b881873fe2c64a80e6c7d7ad84debb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c281154ab8ae18f6eca6de38304084d1 = $(`<div id="html_c281154ab8ae18f6eca6de38304084d1" style="width: 100.0%; height: 100.0%;"><b>Zagora</b><br><a href="https://www.google.com/maps/search/?api=1&query=30.3214%2C-5.8351" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_a6b881873fe2c64a80e6c7d7ad84debb.setContent(html_c281154ab8ae18f6eca6de38304084d1);
+            
+        
+
+        marker_70700cb267498e678dcc5d01c032baa2.bindPopup(popup_a6b881873fe2c64a80e6c7d7ad84debb)
+        ;
+
+        
+    
+    
+            marker_70700cb267498e678dcc5d01c032baa2.bindTooltip(
+                `<div>
+                     Deserto di Zagora
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_70700cb267498e678dcc5d01c032baa2.setIcon(icon_9e37eabef39c10169a146b97a32e3ea0);
+            
+    
+            var marker_ef86348e47e68f0cacbccbf519b9cf2f = L.marker(
+                [31.1, -4.0],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_4571573a2be926c7deef0af4194f353f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5043999056c34fed4d2215304bffc9d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cd4b82a3873d0259d1770f7af0db402 = $(`<div id="html_9cd4b82a3873d0259d1770f7af0db402" style="width: 100.0%; height: 100.0%;"><b>Merzouga (Erg Chebbi)</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.1%2C-4.0" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_5043999056c34fed4d2215304bffc9d3.setContent(html_9cd4b82a3873d0259d1770f7af0db402);
+            
+        
+
+        marker_ef86348e47e68f0cacbccbf519b9cf2f.bindPopup(popup_5043999056c34fed4d2215304bffc9d3)
+        ;
+
+        
+    
+    
+            marker_ef86348e47e68f0cacbccbf519b9cf2f.bindTooltip(
+                `<div>
+                     Deserto di Merzouga
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef86348e47e68f0cacbccbf519b9cf2f.setIcon(icon_4571573a2be926c7deef0af4194f353f);
+            
+    
+            var marker_44b5c7aa68633c1d148638dea5f44940 = L.marker(
+                [31.6298, -7.9874],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_1966cc7f61a1a4871d08322881cfe107 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_95949002cfed7b5f28520253cd52986a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e231439f98c96307becd12212e615a7e = $(`<div id="html_e231439f98c96307becd12212e615a7e" style="width: 100.0%; height: 100.0%;"><b>Nomad (cucina marocchina rivisitata)</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6298%2C-7.9874" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_95949002cfed7b5f28520253cd52986a.setContent(html_e231439f98c96307becd12212e615a7e);
+            
+        
+
+        marker_44b5c7aa68633c1d148638dea5f44940.bindPopup(popup_95949002cfed7b5f28520253cd52986a)
+        ;
+
+        
+    
+    
+            marker_44b5c7aa68633c1d148638dea5f44940.bindTooltip(
+                `<div>
+                     Nomad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44b5c7aa68633c1d148638dea5f44940.setIcon(icon_1966cc7f61a1a4871d08322881cfe107);
+            
+    
+            var marker_537f601a0a83892d07aa32be15f708ac = L.marker(
+                [31.6299, -7.9868],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_d315c3d9cd5918de32fe310f6b7b0bcc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_730643381165357674c9b00d1a020012 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c2f974afb5f292024f6ba08ff7d464f = $(`<div id="html_1c2f974afb5f292024f6ba08ff7d464f" style="width: 100.0%; height: 100.0%;"><b>Café Des Épices</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6299%2C-7.9868" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_730643381165357674c9b00d1a020012.setContent(html_1c2f974afb5f292024f6ba08ff7d464f);
+            
+        
+
+        marker_537f601a0a83892d07aa32be15f708ac.bindPopup(popup_730643381165357674c9b00d1a020012)
+        ;
+
+        
+    
+    
+            marker_537f601a0a83892d07aa32be15f708ac.bindTooltip(
+                `<div>
+                     Café Des Épices
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_537f601a0a83892d07aa32be15f708ac.setIcon(icon_d315c3d9cd5918de32fe310f6b7b0bcc);
+            
+    
+            var marker_4e14089a7853b020572be47f099cc8d6 = L.marker(
+                [31.632, -7.9967],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_e952166a67b16cb69af48eeee2d48567 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e045b9ebe1b96830380ef16126d63755 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acfee87d782c3cb57de0cdd5246c596b = $(`<div id="html_acfee87d782c3cb57de0cdd5246c596b" style="width: 100.0%; height: 100.0%;"><b>Le Jardin</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.632%2C-7.9967" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_e045b9ebe1b96830380ef16126d63755.setContent(html_acfee87d782c3cb57de0cdd5246c596b);
+            
+        
+
+        marker_4e14089a7853b020572be47f099cc8d6.bindPopup(popup_e045b9ebe1b96830380ef16126d63755)
+        ;
+
+        
+    
+    
+            marker_4e14089a7853b020572be47f099cc8d6.bindTooltip(
+                `<div>
+                     Le Jardin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e14089a7853b020572be47f099cc8d6.setIcon(icon_e952166a67b16cb69af48eeee2d48567);
+            
+    
+            var marker_127765da7f0ac24ce9e876f33f7ec9bc = L.marker(
+                [31.6157, -7.9891],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_0d974b438d79a0de19d734873292c4bf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14aff5d9373a3a0bd164d5b4d716a260 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27cf213b9882d0eeb1d6741c2a2740ac = $(`<div id="html_27cf213b9882d0eeb1d6741c2a2740ac" style="width: 100.0%; height: 100.0%;"><b>Café Clock (camel burger, menù creativo)</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6157%2C-7.9891" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_14aff5d9373a3a0bd164d5b4d716a260.setContent(html_27cf213b9882d0eeb1d6741c2a2740ac);
+            
+        
+
+        marker_127765da7f0ac24ce9e876f33f7ec9bc.bindPopup(popup_14aff5d9373a3a0bd164d5b4d716a260)
+        ;
+
+        
+    
+    
+            marker_127765da7f0ac24ce9e876f33f7ec9bc.bindTooltip(
+                `<div>
+                     Café Clock
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_127765da7f0ac24ce9e876f33f7ec9bc.setIcon(icon_0d974b438d79a0de19d734873292c4bf);
+            
+    
+            var marker_cae3cf08ce59386bb0d5ac694ac902be = L.marker(
+                [31.6391, -7.9912],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_0d081f3eaf54b0a1e9ee86173c2f7098 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d23c768e222ee57054c82459e54e3ba5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56e4a72be50878208e98029df6caa7c2 = $(`<div id="html_56e4a72be50878208e98029df6caa7c2" style="width: 100.0%; height: 100.0%;"><b>Dar Zellij (cucina tradizionale in riad storico)</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6391%2C-7.9912" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_d23c768e222ee57054c82459e54e3ba5.setContent(html_56e4a72be50878208e98029df6caa7c2);
+            
+        
+
+        marker_cae3cf08ce59386bb0d5ac694ac902be.bindPopup(popup_d23c768e222ee57054c82459e54e3ba5)
+        ;
+
+        
+    
+    
+            marker_cae3cf08ce59386bb0d5ac694ac902be.bindTooltip(
+                `<div>
+                     Dar Zellij
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cae3cf08ce59386bb0d5ac694ac902be.setIcon(icon_0d081f3eaf54b0a1e9ee86173c2f7098);
+            
+    
+            var marker_c4673870da89fba867033ffdaa472323 = L.marker(
+                [31.6234, -7.9841],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_844bc36233d44cb5c3e390e15d0d71f2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_785fb1901c4527f06f327c2c87e002b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e78bd5f7db23e05725f3f81de2a96283 = $(`<div id="html_e78bd5f7db23e05725f3f81de2a96283" style="width: 100.0%; height: 100.0%;"><b>La Famille (cucina vegetariana/vegana)</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6234%2C-7.9841" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_785fb1901c4527f06f327c2c87e002b4.setContent(html_e78bd5f7db23e05725f3f81de2a96283);
+            
+        
+
+        marker_c4673870da89fba867033ffdaa472323.bindPopup(popup_785fb1901c4527f06f327c2c87e002b4)
+        ;
+
+        
+    
+    
+            marker_c4673870da89fba867033ffdaa472323.bindTooltip(
+                `<div>
+                     La Famille
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c4673870da89fba867033ffdaa472323.setIcon(icon_844bc36233d44cb5c3e390e15d0d71f2);
+            
+    
+            var marker_8add2267913e82e7671457976e7ee5dc = L.marker(
+                [31.6228, -7.9813],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_e9c474f814e285076430187a1b8909e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9cf28fed9e14ce1683c11d4cbb4db021 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10f2e11b0c219935fde0c4fd70dd3f7e = $(`<div id="html_10f2e11b0c219935fde0c4fd70dd3f7e" style="width: 100.0%; height: 100.0%;"><b>Naranj (cucina libanese e marocchina)</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6228%2C-7.9813" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_9cf28fed9e14ce1683c11d4cbb4db021.setContent(html_10f2e11b0c219935fde0c4fd70dd3f7e);
+            
+        
+
+        marker_8add2267913e82e7671457976e7ee5dc.bindPopup(popup_9cf28fed9e14ce1683c11d4cbb4db021)
+        ;
+
+        
+    
+    
+            marker_8add2267913e82e7671457976e7ee5dc.bindTooltip(
+                `<div>
+                     Naranj
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8add2267913e82e7671457976e7ee5dc.setIcon(icon_e9c474f814e285076430187a1b8909e1);
+            
+    
+            var marker_7c263b596a8392fb92c1ba238fb2126c = L.marker(
+                [31.6333, -8.0104],
+                {
+}
+            ).addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+            var icon_bbfcab82edd8f444352779a4d40d2406 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cutlery",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e3d753332b69948e3e8346a19b95e177 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7a17b35aa1ebbcd7b4201587385a473 = $(`<div id="html_d7a17b35aa1ebbcd7b4201587385a473" style="width: 100.0%; height: 100.0%;"><b>16 Café (pasticceria e caffè in Gueliz)</b><br><a href="https://www.google.com/maps/search/?api=1&query=31.6333%2C-8.0104" target="_blank">Apri su Google Maps</a></div>`)[0];
+                popup_e3d753332b69948e3e8346a19b95e177.setContent(html_d7a17b35aa1ebbcd7b4201587385a473);
+            
+        
+
+        marker_7c263b596a8392fb92c1ba238fb2126c.bindPopup(popup_e3d753332b69948e3e8346a19b95e177)
+        ;
+
+        
+    
+    
+            marker_7c263b596a8392fb92c1ba238fb2126c.bindTooltip(
+                `<div>
+                     16 Café
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c263b596a8392fb92c1ba238fb2126c.setIcon(icon_bbfcab82edd8f444352779a4d40d2406);
+            
+    
+            tile_layer_44ad2e12060a7619402735d296dec256.addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+                marker_2d5a6fba1e55f6e2c9e525953aaffd45.setIcon(icon_e1cfd6b3279ac627af176942cb7753ef);
+            
+    
+                marker_c7fee85253fe92daefbf6483a3f7f3c9.setIcon(icon_5142ee7d18c43aa563ff84a935c2325e);
+            
+    
+                marker_9cc2c1decdb5eb2793eca83f115a811a.setIcon(icon_5b238906ad4fe6c1a269396f01df2aa9);
+            
+    
+                marker_2eea3fe14b6ed754042056379b6e0a56.setIcon(icon_8ea1c23c2a697fe47690ec396fee82c4);
+            
+    
+                marker_69df0e0dc524a41c330e3127364e22c3.setIcon(icon_ad950a251f90973de48ea658293cf3a2);
+            
+    
+                marker_5fd345484bd1b3eaf4ba08f39147ca81.setIcon(icon_490a8da4d7776564d6e36f1c0d084111);
+            
+    
+                marker_d371e5165baa41302298eab65d8584cc.setIcon(icon_3506f5aaf5b5a2f32884efd6755f649a);
+            
+    
+                marker_805c023926f1622e7296e7fe4b33fc06.setIcon(icon_73c33f3b91b1233c22041d69e753949f);
+            
+    
+                marker_b03d72ea087e1a72821bbe0dca07888c.setIcon(icon_fee394c7fc69e433987b2f6fc52f9901);
+            
+    
+                marker_3884c5e0544f549e2170ea5aac3e6480.setIcon(icon_98e50ac77d71e23b1d00336db89b8c02);
+            
+    
+                marker_275be5c54e36fdc9d3783e2336e86289.setIcon(icon_4eea90f342c5c4b3170eb1b76c0fb31e);
+            
+    
+                marker_427ef779fa0d19283a5b7a8c4a3ffea6.setIcon(icon_e053035eeac142365fc1a68bd891096c);
+            
+    
+                marker_a9b89b485a0503158bea7c8fc8138ca1.setIcon(icon_d717ac528fc46205c21b568fdcde24a5);
+            
+    
+                marker_813b814a4ebc308600d922fb6394fbf4.setIcon(icon_0710ff07d3f131b54181a43f22936e50);
+            
+    
+                marker_2c8e36a223857434267dc845da081be5.setIcon(icon_0aad5905b1613d8172054b1211b4d725);
+            
+    
+                marker_c85d2e2ef1d9c141c6ec2681f1a8e4d2.setIcon(icon_c04fa613b4557aa9832363c1199c9d06);
+            
+    
+                marker_d0420a19624b6acf6e2190a55ce0dbfa.setIcon(icon_ff109ffe0fea7f57bc460135805c50ef);
+            
+    
+                marker_70700cb267498e678dcc5d01c032baa2.setIcon(icon_9e37eabef39c10169a146b97a32e3ea0);
+            
+    
+                marker_ef86348e47e68f0cacbccbf519b9cf2f.setIcon(icon_4571573a2be926c7deef0af4194f353f);
+            
+    
+                marker_44b5c7aa68633c1d148638dea5f44940.setIcon(icon_1966cc7f61a1a4871d08322881cfe107);
+            
+    
+                marker_537f601a0a83892d07aa32be15f708ac.setIcon(icon_d315c3d9cd5918de32fe310f6b7b0bcc);
+            
+    
+                marker_4e14089a7853b020572be47f099cc8d6.setIcon(icon_e952166a67b16cb69af48eeee2d48567);
+            
+    
+                marker_127765da7f0ac24ce9e876f33f7ec9bc.setIcon(icon_0d974b438d79a0de19d734873292c4bf);
+            
+    
+                marker_cae3cf08ce59386bb0d5ac694ac902be.setIcon(icon_0d081f3eaf54b0a1e9ee86173c2f7098);
+            
+    
+                marker_c4673870da89fba867033ffdaa472323.setIcon(icon_844bc36233d44cb5c3e390e15d0d71f2);
+            
+    
+                marker_8add2267913e82e7671457976e7ee5dc.setIcon(icon_e9c474f814e285076430187a1b8909e1);
+            
+    
+                marker_7c263b596a8392fb92c1ba238fb2126c.setIcon(icon_bbfcab82edd8f444352779a4d40d2406);
+            
+    
+            tile_layer_44ad2e12060a7619402735d296dec256.addTo(map_4108bdcc82541c1a78d91486c6514979);
+        
+    
+                marker_2d5a6fba1e55f6e2c9e525953aaffd45.setIcon(icon_e1cfd6b3279ac627af176942cb7753ef);
+            
+    
+                marker_c7fee85253fe92daefbf6483a3f7f3c9.setIcon(icon_5142ee7d18c43aa563ff84a935c2325e);
+            
+    
+                marker_9cc2c1decdb5eb2793eca83f115a811a.setIcon(icon_5b238906ad4fe6c1a269396f01df2aa9);
+            
+    
+                marker_2eea3fe14b6ed754042056379b6e0a56.setIcon(icon_8ea1c23c2a697fe47690ec396fee82c4);
+            
+    
+                marker_69df0e0dc524a41c330e3127364e22c3.setIcon(icon_ad950a251f90973de48ea658293cf3a2);
+            
+    
+                marker_5fd345484bd1b3eaf4ba08f39147ca81.setIcon(icon_490a8da4d7776564d6e36f1c0d084111);
+            
+    
+                marker_d371e5165baa41302298eab65d8584cc.setIcon(icon_3506f5aaf5b5a2f32884efd6755f649a);
+            
+    
+                marker_805c023926f1622e7296e7fe4b33fc06.setIcon(icon_73c33f3b91b1233c22041d69e753949f);
+            
+    
+                marker_b03d72ea087e1a72821bbe0dca07888c.setIcon(icon_fee394c7fc69e433987b2f6fc52f9901);
+            
+    
+                marker_3884c5e0544f549e2170ea5aac3e6480.setIcon(icon_98e50ac77d71e23b1d00336db89b8c02);
+            
+    
+                marker_275be5c54e36fdc9d3783e2336e86289.setIcon(icon_4eea90f342c5c4b3170eb1b76c0fb31e);
+            
+    
+                marker_427ef779fa0d19283a5b7a8c4a3ffea6.setIcon(icon_e053035eeac142365fc1a68bd891096c);
+            
+    
+                marker_a9b89b485a0503158bea7c8fc8138ca1.setIcon(icon_d717ac528fc46205c21b568fdcde24a5);
+            
+    
+                marker_813b814a4ebc308600d922fb6394fbf4.setIcon(icon_0710ff07d3f131b54181a43f22936e50);
+            
+    
+                marker_2c8e36a223857434267dc845da081be5.setIcon(icon_0aad5905b1613d8172054b1211b4d725);
+            
+    
+                marker_c85d2e2ef1d9c141c6ec2681f1a8e4d2.setIcon(icon_c04fa613b4557aa9832363c1199c9d06);
+            
+    
+                marker_d0420a19624b6acf6e2190a55ce0dbfa.setIcon(icon_ff109ffe0fea7f57bc460135805c50ef);
+            
+    
+                marker_70700cb267498e678dcc5d01c032baa2.setIcon(icon_9e37eabef39c10169a146b97a32e3ea0);
+            
+    
+                marker_ef86348e47e68f0cacbccbf519b9cf2f.setIcon(icon_4571573a2be926c7deef0af4194f353f);
+            
+    
+                marker_44b5c7aa68633c1d148638dea5f44940.setIcon(icon_1966cc7f61a1a4871d08322881cfe107);
+            
+    
+                marker_537f601a0a83892d07aa32be15f708ac.setIcon(icon_d315c3d9cd5918de32fe310f6b7b0bcc);
+            
+    
+                marker_4e14089a7853b020572be47f099cc8d6.setIcon(icon_e952166a67b16cb69af48eeee2d48567);
+            
+    
+                marker_127765da7f0ac24ce9e876f33f7ec9bc.setIcon(icon_0d974b438d79a0de19d734873292c4bf);
+            
+    
+                marker_cae3cf08ce59386bb0d5ac694ac902be.setIcon(icon_0d081f3eaf54b0a1e9ee86173c2f7098);
+            
+    
+                marker_c4673870da89fba867033ffdaa472323.setIcon(icon_844bc36233d44cb5c3e390e15d0d71f2);
+            
+    
+                marker_8add2267913e82e7671457976e7ee5dc.setIcon(icon_e9c474f814e285076430187a1b8909e1);
+            
+    
+                marker_7c263b596a8392fb92c1ba238fb2126c.setIcon(icon_bbfcab82edd8f444352779a4d40d2406);
+            
+</script>
+</html>
