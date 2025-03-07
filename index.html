@@ -1,1550 +1,305 @@
-<!DOCTYPE html>
-<html>
-<head>
-    
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-        <script>
-            L_NO_TOUCH = false;
-            L_DISABLE_3D = false;
-        </script>
-    
-    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
-    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
-    
-            <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <style>
-                #map_130d20d345662911e8d0bc3c6442c9c0 {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
-                }
-                .leaflet-container { font-size: 1rem; }
-            </style>
-        
-</head>
-<body>
-    
-    
-            <div class="folium-map" id="map_130d20d345662911e8d0bc3c6442c9c0" ></div>
-        
-</body>
-<script>
-    
-    
-            var map_130d20d345662911e8d0bc3c6442c9c0 = L.map(
-                "map_130d20d345662911e8d0bc3c6442c9c0",
-                {
-                    center: [31.63, -7.99],
-                    crs: L.CRS.EPSG3857,
-                    ...{
-  "zoom": 13,
-  "zoomControl": true,
-  "preferCanvas": false,
-}
-
-                }
-            );
-
-            
-
-        
-    
-            var tile_layer_ca81343f0c5abadfeb489e48819054d8 = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
-        
-    
-            tile_layer_ca81343f0c5abadfeb489e48819054d8.addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var marker_81ab2416a19fa55e8db74fddabe7af9f = L.marker(
-                [31.6345, -7.9922],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_d3c7963d046ad6fdcba6cbcf1e91dfc0 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "home",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_f8e9cf8ce371fffe9c7104c1b606beba = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_fc3524fc31a9581b8f208cd6eaf07f92 = $(`<div id="html_fc3524fc31a9581b8f208cd6eaf07f92" style="width: 100.0%; height: 100.0%;">Riad De Vinci & SPA</div>`)[0];
-                popup_f8e9cf8ce371fffe9c7104c1b606beba.setContent(html_fc3524fc31a9581b8f208cd6eaf07f92);
-            
-        
-
-        marker_81ab2416a19fa55e8db74fddabe7af9f.bindPopup(popup_f8e9cf8ce371fffe9c7104c1b606beba)
-        ;
-
-        
-    
-    
-            marker_81ab2416a19fa55e8db74fddabe7af9f.bindTooltip(
-                `<div>
-                     Riad De Vinci & SPA
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_81ab2416a19fa55e8db74fddabe7af9f.setIcon(icon_d3c7963d046ad6fdcba6cbcf1e91dfc0);
-            
-    
-            var marker_4b466e4039bb3cff8e6265c11cf0e1e1 = L.marker(
-                [31.6312, -7.9889],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_0f433368d0a9bd58f1cf8430ced4ad1d = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "home",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_38c5222fa63b941c95f5184ad1e725b2 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_f98021120d6372634f674401efc90e9a = $(`<div id="html_f98021120d6372634f674401efc90e9a" style="width: 100.0%; height: 100.0%;">Dar Daoud</div>`)[0];
-                popup_38c5222fa63b941c95f5184ad1e725b2.setContent(html_f98021120d6372634f674401efc90e9a);
-            
-        
-
-        marker_4b466e4039bb3cff8e6265c11cf0e1e1.bindPopup(popup_38c5222fa63b941c95f5184ad1e725b2)
-        ;
-
-        
-    
-    
-            marker_4b466e4039bb3cff8e6265c11cf0e1e1.bindTooltip(
-                `<div>
-                     Dar Daoud
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_4b466e4039bb3cff8e6265c11cf0e1e1.setIcon(icon_0f433368d0a9bd58f1cf8430ced4ad1d);
-            
-    
-            var marker_b87da0db81ef35ef3430e50978e7ac6a = L.marker(
-                [31.6374, -7.991],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_165941bbb2a06230b31d93eb4504f6f8 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "home",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_ab50b2639a1964e275a6857a985ece97 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_a7073199237822597d5a3c13fe02724b = $(`<div id="html_a7073199237822597d5a3c13fe02724b" style="width: 100.0%; height: 100.0%;">Riad 1001 couleurs</div>`)[0];
-                popup_ab50b2639a1964e275a6857a985ece97.setContent(html_a7073199237822597d5a3c13fe02724b);
-            
-        
-
-        marker_b87da0db81ef35ef3430e50978e7ac6a.bindPopup(popup_ab50b2639a1964e275a6857a985ece97)
-        ;
-
-        
-    
-    
-            marker_b87da0db81ef35ef3430e50978e7ac6a.bindTooltip(
-                `<div>
-                     Riad 1001 couleurs
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_b87da0db81ef35ef3430e50978e7ac6a.setIcon(icon_165941bbb2a06230b31d93eb4504f6f8);
-            
-    
-            var marker_8e1446ffafd9ad213c757758ad7adb73 = L.marker(
-                [31.6318, -7.9927],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_348c95c5e4b15ab5ce25ef72b8988b89 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "blue",
-  "iconColor": "white",
-  "icon": "home",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_71115c00520d471d3383f18508add581 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_e73133ca019a499befd1a30202c2908e = $(`<div id="html_e73133ca019a499befd1a30202c2908e" style="width: 100.0%; height: 100.0%;">Riad Minorisa</div>`)[0];
-                popup_71115c00520d471d3383f18508add581.setContent(html_e73133ca019a499befd1a30202c2908e);
-            
-        
-
-        marker_8e1446ffafd9ad213c757758ad7adb73.bindPopup(popup_71115c00520d471d3383f18508add581)
-        ;
-
-        
-    
-    
-            marker_8e1446ffafd9ad213c757758ad7adb73.bindTooltip(
-                `<div>
-                     Riad Minorisa
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_8e1446ffafd9ad213c757758ad7adb73.setIcon(icon_348c95c5e4b15ab5ce25ef72b8988b89);
-            
-    
-            var marker_3cbeb1a321689672268f9e9eecf027fd = L.marker(
-                [31.6258, -7.9891],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_99c23d4618791c3e0a966a504e4444eb = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_f2a302e9082153aaf413378c4d47580c = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_53cbf27a403300a194a8298f1de887b7 = $(`<div id="html_53cbf27a403300a194a8298f1de887b7" style="width: 100.0%; height: 100.0%;">Jemaa el-Fnaa</div>`)[0];
-                popup_f2a302e9082153aaf413378c4d47580c.setContent(html_53cbf27a403300a194a8298f1de887b7);
-            
-        
-
-        marker_3cbeb1a321689672268f9e9eecf027fd.bindPopup(popup_f2a302e9082153aaf413378c4d47580c)
-        ;
-
-        
-    
-    
-            marker_3cbeb1a321689672268f9e9eecf027fd.bindTooltip(
-                `<div>
-                     Jemaa el-Fnaa
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_3cbeb1a321689672268f9e9eecf027fd.setIcon(icon_99c23d4618791c3e0a966a504e4444eb);
-            
-    
-            var marker_b2dc0946f830eed7c1033f3f36c49354 = L.marker(
-                [31.6215, -7.9937],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_5731f9aa5c370eec4a2bd8a9c3291aa0 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_ba4ad92d18208d78101cb60715f47115 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_3a2c6d1a52561b0797f5431a5a966245 = $(`<div id="html_3a2c6d1a52561b0797f5431a5a966245" style="width: 100.0%; height: 100.0%;">Moschea Koutoubia</div>`)[0];
-                popup_ba4ad92d18208d78101cb60715f47115.setContent(html_3a2c6d1a52561b0797f5431a5a966245);
-            
-        
-
-        marker_b2dc0946f830eed7c1033f3f36c49354.bindPopup(popup_ba4ad92d18208d78101cb60715f47115)
-        ;
-
-        
-    
-    
-            marker_b2dc0946f830eed7c1033f3f36c49354.bindTooltip(
-                `<div>
-                     Moschea Koutoubia
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_b2dc0946f830eed7c1033f3f36c49354.setIcon(icon_5731f9aa5c370eec4a2bd8a9c3291aa0);
-            
-    
-            var marker_63a322b19d40e9689ad350aabf9ab587 = L.marker(
-                [31.6227, -7.981],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_9c31b28cb0340d58460c870de9448430 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_48184c4f2d51d160843f745ece84b5cd = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_4cc922962f645a49e36154139e03cec3 = $(`<div id="html_4cc922962f645a49e36154139e03cec3" style="width: 100.0%; height: 100.0%;">Palazzo Bahia</div>`)[0];
-                popup_48184c4f2d51d160843f745ece84b5cd.setContent(html_4cc922962f645a49e36154139e03cec3);
-            
-        
-
-        marker_63a322b19d40e9689ad350aabf9ab587.bindPopup(popup_48184c4f2d51d160843f745ece84b5cd)
-        ;
-
-        
-    
-    
-            marker_63a322b19d40e9689ad350aabf9ab587.bindTooltip(
-                `<div>
-                     Palazzo Bahia
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_63a322b19d40e9689ad350aabf9ab587.setIcon(icon_9c31b28cb0340d58460c870de9448430);
-            
-    
-            var marker_f3712d9de1a1ea527cc9763cc03813bc = L.marker(
-                [31.6186, -7.9884],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_8b9c4293137d3842c7fcaa4ae2f4abdb = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_9142a72089b49ee22e41839f4f1c8581 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_730e8b239de94c7bf1ee85b97c4ae01c = $(`<div id="html_730e8b239de94c7bf1ee85b97c4ae01c" style="width: 100.0%; height: 100.0%;">Palazzo El Badi</div>`)[0];
-                popup_9142a72089b49ee22e41839f4f1c8581.setContent(html_730e8b239de94c7bf1ee85b97c4ae01c);
-            
-        
-
-        marker_f3712d9de1a1ea527cc9763cc03813bc.bindPopup(popup_9142a72089b49ee22e41839f4f1c8581)
-        ;
-
-        
-    
-    
-            marker_f3712d9de1a1ea527cc9763cc03813bc.bindTooltip(
-                `<div>
-                     Palazzo El Badi
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_f3712d9de1a1ea527cc9763cc03813bc.setIcon(icon_8b9c4293137d3842c7fcaa4ae2f4abdb);
-            
-    
-            var marker_b6cfc875603b4a4b939a79d37cc03ef1 = L.marker(
-                [31.6372, -8.0026],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_5c24db689afe1109a4084ceceacfcce2 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_44759481fb827904c7443d7ea81fffff = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_b3938510d49e2c04f53a6404323a4d1c = $(`<div id="html_b3938510d49e2c04f53a6404323a4d1c" style="width: 100.0%; height: 100.0%;">Giardini Majorelle</div>`)[0];
-                popup_44759481fb827904c7443d7ea81fffff.setContent(html_b3938510d49e2c04f53a6404323a4d1c);
-            
-        
-
-        marker_b6cfc875603b4a4b939a79d37cc03ef1.bindPopup(popup_44759481fb827904c7443d7ea81fffff)
-        ;
-
-        
-    
-    
-            marker_b6cfc875603b4a4b939a79d37cc03ef1.bindTooltip(
-                `<div>
-                     Giardini Majorelle
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_b6cfc875603b4a4b939a79d37cc03ef1.setIcon(icon_5c24db689afe1109a4084ceceacfcce2);
-            
-    
-            var marker_efd3a9ec9d4c89e4f936e6abb5239a83 = L.marker(
-                [31.6336, -7.9879],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_b1d70ea4c10ccd23fa96dbe14712bdad = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_4d5d86a9f2fb233c1993392cb30cdc9a = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_1cfc169c42c042596005f1d223a05992 = $(`<div id="html_1cfc169c42c042596005f1d223a05992" style="width: 100.0%; height: 100.0%;">Madrasa di Ben Youssef</div>`)[0];
-                popup_4d5d86a9f2fb233c1993392cb30cdc9a.setContent(html_1cfc169c42c042596005f1d223a05992);
-            
-        
-
-        marker_efd3a9ec9d4c89e4f936e6abb5239a83.bindPopup(popup_4d5d86a9f2fb233c1993392cb30cdc9a)
-        ;
-
-        
-    
-    
-            marker_efd3a9ec9d4c89e4f936e6abb5239a83.bindTooltip(
-                `<div>
-                     Madrasa di Ben Youssef
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_efd3a9ec9d4c89e4f936e6abb5239a83.setIcon(icon_b1d70ea4c10ccd23fa96dbe14712bdad);
-            
-    
-            var marker_baeb117b103f83ae5907b255e485e5cd = L.marker(
-                [31.6163, -7.9888],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_4140e7da0a92a841b3c22eda042db335 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_34bd33711daf49e2d1a88982def95ed9 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_7540c1b247749a65798da1213497a930 = $(`<div id="html_7540c1b247749a65798da1213497a930" style="width: 100.0%; height: 100.0%;">Tombe Saadiane</div>`)[0];
-                popup_34bd33711daf49e2d1a88982def95ed9.setContent(html_7540c1b247749a65798da1213497a930);
-            
-        
-
-        marker_baeb117b103f83ae5907b255e485e5cd.bindPopup(popup_34bd33711daf49e2d1a88982def95ed9)
-        ;
-
-        
-    
-    
-            marker_baeb117b103f83ae5907b255e485e5cd.bindTooltip(
-                `<div>
-                     Tombe Saadiane
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_baeb117b103f83ae5907b255e485e5cd.setIcon(icon_4140e7da0a92a841b3c22eda042db335);
-            
-    
-            var marker_1b95b62c1c0458d508af75b2651a477f = L.marker(
-                [31.6333, -7.9966],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_7a8871ee264f916a06576375e56d874b = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_0c0594074c3366739e76fd916b6477ac = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_8e90d5e150b6e8fd377ae8913e43286d = $(`<div id="html_8e90d5e150b6e8fd377ae8913e43286d" style="width: 100.0%; height: 100.0%;">Dar El Bacha (Musée des Confluences)</div>`)[0];
-                popup_0c0594074c3366739e76fd916b6477ac.setContent(html_8e90d5e150b6e8fd377ae8913e43286d);
-            
-        
-
-        marker_1b95b62c1c0458d508af75b2651a477f.bindPopup(popup_0c0594074c3366739e76fd916b6477ac)
-        ;
-
-        
-    
-    
-            marker_1b95b62c1c0458d508af75b2651a477f.bindTooltip(
-                `<div>
-                     Dar El Bacha
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_1b95b62c1c0458d508af75b2651a477f.setIcon(icon_7a8871ee264f916a06576375e56d874b);
-            
-    
-            var marker_3add4d6fae5bc1e7e3305744cc2ba812 = L.marker(
-                [31.6379, -8.0033],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_4ca2a0a64ae9ae5e7ca9db4e423b6e8b = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_58bd039827c547149df1a2460eb1d95f = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_357af0b179e85aa3c22ea39488a54799 = $(`<div id="html_357af0b179e85aa3c22ea39488a54799" style="width: 100.0%; height: 100.0%;">Museo Yves Saint Laurent</div>`)[0];
-                popup_58bd039827c547149df1a2460eb1d95f.setContent(html_357af0b179e85aa3c22ea39488a54799);
-            
-        
-
-        marker_3add4d6fae5bc1e7e3305744cc2ba812.bindPopup(popup_58bd039827c547149df1a2460eb1d95f)
-        ;
-
-        
-    
-    
-            marker_3add4d6fae5bc1e7e3305744cc2ba812.bindTooltip(
-                `<div>
-                     Museo YSL
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_3add4d6fae5bc1e7e3305744cc2ba812.setIcon(icon_4ca2a0a64ae9ae5e7ca9db4e423b6e8b);
-            
-    
-            var marker_3866052a7290337aebd04111eee14eb2 = L.marker(
-                [31.6082, -8.0159],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_2bbf8e64ed67760fa39707a5c7d12136 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_d8b5c64c51fd68d22f67c9d0fd0b97fd = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_2929f8d103a7a3aff7d2d1d7a7148904 = $(`<div id="html_2929f8d103a7a3aff7d2d1d7a7148904" style="width: 100.0%; height: 100.0%;">La Menara</div>`)[0];
-                popup_d8b5c64c51fd68d22f67c9d0fd0b97fd.setContent(html_2929f8d103a7a3aff7d2d1d7a7148904);
-            
-        
-
-        marker_3866052a7290337aebd04111eee14eb2.bindPopup(popup_d8b5c64c51fd68d22f67c9d0fd0b97fd)
-        ;
-
-        
-    
-    
-            marker_3866052a7290337aebd04111eee14eb2.bindTooltip(
-                `<div>
-                     Giardini della Menara
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_3866052a7290337aebd04111eee14eb2.setIcon(icon_2bbf8e64ed67760fa39707a5c7d12136);
-            
-    
-            var marker_9497df644951b43d335ca82f323b96e2 = L.marker(
-                [31.6196, -7.9819],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_3615cb182a4ad84039bf74a60040e575 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_e040a8dfbf22f8c4e04a98b3f340dabe = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_9b9b785a5f886dec51a96a4994abfdbf = $(`<div id="html_9b9b785a5f886dec51a96a4994abfdbf" style="width: 100.0%; height: 100.0%;">Quartiere Mellah</div>`)[0];
-                popup_e040a8dfbf22f8c4e04a98b3f340dabe.setContent(html_9b9b785a5f886dec51a96a4994abfdbf);
-            
-        
-
-        marker_9497df644951b43d335ca82f323b96e2.bindPopup(popup_e040a8dfbf22f8c4e04a98b3f340dabe)
-        ;
-
-        
-    
-    
-            marker_9497df644951b43d335ca82f323b96e2.bindTooltip(
-                `<div>
-                     Quartiere Mellah
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_9497df644951b43d335ca82f323b96e2.setIcon(icon_3615cb182a4ad84039bf74a60040e575);
-            
-    
-            var marker_dda51e46b4f1c693a8deacc9eff697e1 = L.marker(
-                [31.6244, -8.0016],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_c847ff180af9e0de3c331fe9cd3b4f30 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "info-sign",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_ee588fe1dd7a5b346fcda0c8b43fa683 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_eb4767c9cff7c18667e870ec41d7c949 = $(`<div id="html_eb4767c9cff7c18667e870ec41d7c949" style="width: 100.0%; height: 100.0%;">Cyber Parc Arsat Moulay Abdeslam</div>`)[0];
-                popup_ee588fe1dd7a5b346fcda0c8b43fa683.setContent(html_eb4767c9cff7c18667e870ec41d7c949);
-            
-        
-
-        marker_dda51e46b4f1c693a8deacc9eff697e1.bindPopup(popup_ee588fe1dd7a5b346fcda0c8b43fa683)
-        ;
-
-        
-    
-    
-            marker_dda51e46b4f1c693a8deacc9eff697e1.bindTooltip(
-                `<div>
-                     Cyber Parc Arsat Moulay Abdeslam
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_dda51e46b4f1c693a8deacc9eff697e1.setIcon(icon_c847ff180af9e0de3c331fe9cd3b4f30);
-            
-    
-            var marker_f347f572d7d5fd478402b58d1192cd57 = L.marker(
-                [31.3075, -8.0331],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_e0e9eff15403f0e9e730545de904043f = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "gray",
-  "iconColor": "white",
-  "icon": "flag",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_462feba1c11a7ccb362cb157e26cbcad = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_ede67b72dfb937c0eecb625af170df6a = $(`<div id="html_ede67b72dfb937c0eecb625af170df6a" style="width: 100.0%; height: 100.0%;">Deserto di Agafay</div>`)[0];
-                popup_462feba1c11a7ccb362cb157e26cbcad.setContent(html_ede67b72dfb937c0eecb625af170df6a);
-            
-        
-
-        marker_f347f572d7d5fd478402b58d1192cd57.bindPopup(popup_462feba1c11a7ccb362cb157e26cbcad)
-        ;
-
-        
-    
-    
-            marker_f347f572d7d5fd478402b58d1192cd57.bindTooltip(
-                `<div>
-                     Deserto di Agafay (rocky desert)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_f347f572d7d5fd478402b58d1192cd57.setIcon(icon_e0e9eff15403f0e9e730545de904043f);
-            
-    
-            var marker_4f2d48efa7606bb473f763f72d14c630 = L.marker(
-                [30.3214, -5.8351],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_94c53f1102aa30f586b35560f5090105 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "gray",
-  "iconColor": "white",
-  "icon": "flag",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_e10e4fb2b3d89f1803d60ea6767bad90 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_f9eadc10a961bd5700e832dfd5a4a4fc = $(`<div id="html_f9eadc10a961bd5700e832dfd5a4a4fc" style="width: 100.0%; height: 100.0%;">Zagora</div>`)[0];
-                popup_e10e4fb2b3d89f1803d60ea6767bad90.setContent(html_f9eadc10a961bd5700e832dfd5a4a4fc);
-            
-        
-
-        marker_4f2d48efa7606bb473f763f72d14c630.bindPopup(popup_e10e4fb2b3d89f1803d60ea6767bad90)
-        ;
-
-        
-    
-    
-            marker_4f2d48efa7606bb473f763f72d14c630.bindTooltip(
-                `<div>
-                     Deserto di Zagora
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_4f2d48efa7606bb473f763f72d14c630.setIcon(icon_94c53f1102aa30f586b35560f5090105);
-            
-    
-            var marker_c967984fbf17e8af590427ad0ce9ed72 = L.marker(
-                [31.1, -4.0],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_7be2f9ea5efa7c87f44cf793126c5a0b = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "gray",
-  "iconColor": "white",
-  "icon": "flag",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_72ee318c275f569d90aba7fd4df73d10 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_b018a5843007c0d893153f7dba4caec9 = $(`<div id="html_b018a5843007c0d893153f7dba4caec9" style="width: 100.0%; height: 100.0%;">Merzouga (Erg Chebbi)</div>`)[0];
-                popup_72ee318c275f569d90aba7fd4df73d10.setContent(html_b018a5843007c0d893153f7dba4caec9);
-            
-        
-
-        marker_c967984fbf17e8af590427ad0ce9ed72.bindPopup(popup_72ee318c275f569d90aba7fd4df73d10)
-        ;
-
-        
-    
-    
-            marker_c967984fbf17e8af590427ad0ce9ed72.bindTooltip(
-                `<div>
-                     Deserto di Merzouga
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_c967984fbf17e8af590427ad0ce9ed72.setIcon(icon_7be2f9ea5efa7c87f44cf793126c5a0b);
-            
-    
-            var marker_7d9b787db492130e4ad8c99afb55c065 = L.marker(
-                [31.6298, -7.9874],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_70b28279f66d844722b400ffa413c765 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "cutlery",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_455b2cd61549deee51e9db82eafeaa18 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_ee1bfe043ce722bfa6c39daae3722e99 = $(`<div id="html_ee1bfe043ce722bfa6c39daae3722e99" style="width: 100.0%; height: 100.0%;">Nomad</div>`)[0];
-                popup_455b2cd61549deee51e9db82eafeaa18.setContent(html_ee1bfe043ce722bfa6c39daae3722e99);
-            
-        
-
-        marker_7d9b787db492130e4ad8c99afb55c065.bindPopup(popup_455b2cd61549deee51e9db82eafeaa18)
-        ;
-
-        
-    
-    
-            marker_7d9b787db492130e4ad8c99afb55c065.bindTooltip(
-                `<div>
-                     Nomad (cucina marocchina rivisitata)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_7d9b787db492130e4ad8c99afb55c065.setIcon(icon_70b28279f66d844722b400ffa413c765);
-            
-    
-            var marker_87d77b3a1b4025a636a4d510e0c083db = L.marker(
-                [31.6299, -7.9868],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_9559fadf1915387fb9fea94c2f31a642 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "cutlery",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_015ee3342698aa7ac3219f11964afbe9 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_525f606782b3d9e9350f30ba357eb08f = $(`<div id="html_525f606782b3d9e9350f30ba357eb08f" style="width: 100.0%; height: 100.0%;">Café Des Épices</div>`)[0];
-                popup_015ee3342698aa7ac3219f11964afbe9.setContent(html_525f606782b3d9e9350f30ba357eb08f);
-            
-        
-
-        marker_87d77b3a1b4025a636a4d510e0c083db.bindPopup(popup_015ee3342698aa7ac3219f11964afbe9)
-        ;
-
-        
-    
-    
-            marker_87d77b3a1b4025a636a4d510e0c083db.bindTooltip(
-                `<div>
-                     Café Des Épices
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_87d77b3a1b4025a636a4d510e0c083db.setIcon(icon_9559fadf1915387fb9fea94c2f31a642);
-            
-    
-            var marker_5bde7ce03c4a80e1b8f6cefc413222d8 = L.marker(
-                [31.632, -7.9967],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_f854a218d9c8fbedb275174f1088447a = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "cutlery",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_3cffdf820bcc4523eda0031f9ee6c6cb = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_9d12f5751c0d8645394ae7964f5bba44 = $(`<div id="html_9d12f5751c0d8645394ae7964f5bba44" style="width: 100.0%; height: 100.0%;">Le Jardin</div>`)[0];
-                popup_3cffdf820bcc4523eda0031f9ee6c6cb.setContent(html_9d12f5751c0d8645394ae7964f5bba44);
-            
-        
-
-        marker_5bde7ce03c4a80e1b8f6cefc413222d8.bindPopup(popup_3cffdf820bcc4523eda0031f9ee6c6cb)
-        ;
-
-        
-    
-    
-            marker_5bde7ce03c4a80e1b8f6cefc413222d8.bindTooltip(
-                `<div>
-                     Le Jardin
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_5bde7ce03c4a80e1b8f6cefc413222d8.setIcon(icon_f854a218d9c8fbedb275174f1088447a);
-            
-    
-            var marker_9ed779dac157c4e5ecb0583a88bcdbe5 = L.marker(
-                [31.6157, -7.9891],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_706a69139732f62fa891019c57daba0c = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "cutlery",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_25f7f82f76e9b639d2555a3e1503ad7e = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_f371b6fce6ed26faca91f5ac3dc93163 = $(`<div id="html_f371b6fce6ed26faca91f5ac3dc93163" style="width: 100.0%; height: 100.0%;">Café Clock</div>`)[0];
-                popup_25f7f82f76e9b639d2555a3e1503ad7e.setContent(html_f371b6fce6ed26faca91f5ac3dc93163);
-            
-        
-
-        marker_9ed779dac157c4e5ecb0583a88bcdbe5.bindPopup(popup_25f7f82f76e9b639d2555a3e1503ad7e)
-        ;
-
-        
-    
-    
-            marker_9ed779dac157c4e5ecb0583a88bcdbe5.bindTooltip(
-                `<div>
-                     Café Clock (camel burger, menù creativo)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_9ed779dac157c4e5ecb0583a88bcdbe5.setIcon(icon_706a69139732f62fa891019c57daba0c);
-            
-    
-            var marker_58ed3998aa24cb09d7533df600aa8102 = L.marker(
-                [31.6391, -7.9912],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_65d4610b5dff10fed2f1a7e62a8b835f = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "cutlery",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_37336cb63fa25988494797be1ad70094 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_82989b6d226e9da843ae57c50a372d81 = $(`<div id="html_82989b6d226e9da843ae57c50a372d81" style="width: 100.0%; height: 100.0%;">Dar Zellij</div>`)[0];
-                popup_37336cb63fa25988494797be1ad70094.setContent(html_82989b6d226e9da843ae57c50a372d81);
-            
-        
-
-        marker_58ed3998aa24cb09d7533df600aa8102.bindPopup(popup_37336cb63fa25988494797be1ad70094)
-        ;
-
-        
-    
-    
-            marker_58ed3998aa24cb09d7533df600aa8102.bindTooltip(
-                `<div>
-                     Dar Zellij (cucina tradizionale in riad storico)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_58ed3998aa24cb09d7533df600aa8102.setIcon(icon_65d4610b5dff10fed2f1a7e62a8b835f);
-            
-    
-            var marker_cf5fe4b05cc003c7b7190b29e763ef7e = L.marker(
-                [31.6234, -7.9841],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_ce6571ea91f079abf7c750f3ddfc535c = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "cutlery",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_fee42090e5b3413078c0b711e26e8fd8 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_721fc190463ca81cd662d7eb8b6c1fab = $(`<div id="html_721fc190463ca81cd662d7eb8b6c1fab" style="width: 100.0%; height: 100.0%;">La Famille</div>`)[0];
-                popup_fee42090e5b3413078c0b711e26e8fd8.setContent(html_721fc190463ca81cd662d7eb8b6c1fab);
-            
-        
-
-        marker_cf5fe4b05cc003c7b7190b29e763ef7e.bindPopup(popup_fee42090e5b3413078c0b711e26e8fd8)
-        ;
-
-        
-    
-    
-            marker_cf5fe4b05cc003c7b7190b29e763ef7e.bindTooltip(
-                `<div>
-                     La Famille (cucina vegetariana/vegana)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_cf5fe4b05cc003c7b7190b29e763ef7e.setIcon(icon_ce6571ea91f079abf7c750f3ddfc535c);
-            
-    
-            var marker_ddfd1134978214046539d01f9179b713 = L.marker(
-                [31.6228, -7.9813],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_244e86a68590f852c6f68c27eebb58a7 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "cutlery",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_40e1b1bcc4e752469a67e041ad9148c0 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_7832115f58c046b33b0634aeb4d74ce2 = $(`<div id="html_7832115f58c046b33b0634aeb4d74ce2" style="width: 100.0%; height: 100.0%;">Naranj</div>`)[0];
-                popup_40e1b1bcc4e752469a67e041ad9148c0.setContent(html_7832115f58c046b33b0634aeb4d74ce2);
-            
-        
-
-        marker_ddfd1134978214046539d01f9179b713.bindPopup(popup_40e1b1bcc4e752469a67e041ad9148c0)
-        ;
-
-        
-    
-    
-            marker_ddfd1134978214046539d01f9179b713.bindTooltip(
-                `<div>
-                     Naranj (cucina libanese e marocchina)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_ddfd1134978214046539d01f9179b713.setIcon(icon_244e86a68590f852c6f68c27eebb58a7);
-            
-    
-            var marker_47c3166c0c3e886463b52de7a6c430eb = L.marker(
-                [31.6333, -8.0104],
-                {
-}
-            ).addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-            var icon_0f43bfa7a4e5f89328f07c17fcdefa5a = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "green",
-  "iconColor": "white",
-  "icon": "cutlery",
-  "prefix": "fa",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_0a52756ebfc5ac026cd8bf9e4916102e = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_1b0f099983d7361965b2ffbfba70702f = $(`<div id="html_1b0f099983d7361965b2ffbfba70702f" style="width: 100.0%; height: 100.0%;">16 Café (Gueliz)</div>`)[0];
-                popup_0a52756ebfc5ac026cd8bf9e4916102e.setContent(html_1b0f099983d7361965b2ffbfba70702f);
-            
-        
-
-        marker_47c3166c0c3e886463b52de7a6c430eb.bindPopup(popup_0a52756ebfc5ac026cd8bf9e4916102e)
-        ;
-
-        
-    
-    
-            marker_47c3166c0c3e886463b52de7a6c430eb.bindTooltip(
-                `<div>
-                     16 Café (pasticceria e caffè in Gueliz)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_47c3166c0c3e886463b52de7a6c430eb.setIcon(icon_0f43bfa7a4e5f89328f07c17fcdefa5a);
-            
-    
-            tile_layer_ca81343f0c5abadfeb489e48819054d8.addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-                marker_81ab2416a19fa55e8db74fddabe7af9f.setIcon(icon_d3c7963d046ad6fdcba6cbcf1e91dfc0);
-            
-    
-                marker_4b466e4039bb3cff8e6265c11cf0e1e1.setIcon(icon_0f433368d0a9bd58f1cf8430ced4ad1d);
-            
-    
-                marker_b87da0db81ef35ef3430e50978e7ac6a.setIcon(icon_165941bbb2a06230b31d93eb4504f6f8);
-            
-    
-                marker_8e1446ffafd9ad213c757758ad7adb73.setIcon(icon_348c95c5e4b15ab5ce25ef72b8988b89);
-            
-    
-                marker_3cbeb1a321689672268f9e9eecf027fd.setIcon(icon_99c23d4618791c3e0a966a504e4444eb);
-            
-    
-                marker_b2dc0946f830eed7c1033f3f36c49354.setIcon(icon_5731f9aa5c370eec4a2bd8a9c3291aa0);
-            
-    
-                marker_63a322b19d40e9689ad350aabf9ab587.setIcon(icon_9c31b28cb0340d58460c870de9448430);
-            
-    
-                marker_f3712d9de1a1ea527cc9763cc03813bc.setIcon(icon_8b9c4293137d3842c7fcaa4ae2f4abdb);
-            
-    
-                marker_b6cfc875603b4a4b939a79d37cc03ef1.setIcon(icon_5c24db689afe1109a4084ceceacfcce2);
-            
-    
-                marker_efd3a9ec9d4c89e4f936e6abb5239a83.setIcon(icon_b1d70ea4c10ccd23fa96dbe14712bdad);
-            
-    
-                marker_baeb117b103f83ae5907b255e485e5cd.setIcon(icon_4140e7da0a92a841b3c22eda042db335);
-            
-    
-                marker_1b95b62c1c0458d508af75b2651a477f.setIcon(icon_7a8871ee264f916a06576375e56d874b);
-            
-    
-                marker_3add4d6fae5bc1e7e3305744cc2ba812.setIcon(icon_4ca2a0a64ae9ae5e7ca9db4e423b6e8b);
-            
-    
-                marker_3866052a7290337aebd04111eee14eb2.setIcon(icon_2bbf8e64ed67760fa39707a5c7d12136);
-            
-    
-                marker_9497df644951b43d335ca82f323b96e2.setIcon(icon_3615cb182a4ad84039bf74a60040e575);
-            
-    
-                marker_dda51e46b4f1c693a8deacc9eff697e1.setIcon(icon_c847ff180af9e0de3c331fe9cd3b4f30);
-            
-    
-                marker_f347f572d7d5fd478402b58d1192cd57.setIcon(icon_e0e9eff15403f0e9e730545de904043f);
-            
-    
-                marker_4f2d48efa7606bb473f763f72d14c630.setIcon(icon_94c53f1102aa30f586b35560f5090105);
-            
-    
-                marker_c967984fbf17e8af590427ad0ce9ed72.setIcon(icon_7be2f9ea5efa7c87f44cf793126c5a0b);
-            
-    
-                marker_7d9b787db492130e4ad8c99afb55c065.setIcon(icon_70b28279f66d844722b400ffa413c765);
-            
-    
-                marker_87d77b3a1b4025a636a4d510e0c083db.setIcon(icon_9559fadf1915387fb9fea94c2f31a642);
-            
-    
-                marker_5bde7ce03c4a80e1b8f6cefc413222d8.setIcon(icon_f854a218d9c8fbedb275174f1088447a);
-            
-    
-                marker_9ed779dac157c4e5ecb0583a88bcdbe5.setIcon(icon_706a69139732f62fa891019c57daba0c);
-            
-    
-                marker_58ed3998aa24cb09d7533df600aa8102.setIcon(icon_65d4610b5dff10fed2f1a7e62a8b835f);
-            
-    
-                marker_cf5fe4b05cc003c7b7190b29e763ef7e.setIcon(icon_ce6571ea91f079abf7c750f3ddfc535c);
-            
-    
-                marker_ddfd1134978214046539d01f9179b713.setIcon(icon_244e86a68590f852c6f68c27eebb58a7);
-            
-    
-                marker_47c3166c0c3e886463b52de7a6c430eb.setIcon(icon_0f43bfa7a4e5f89328f07c17fcdefa5a);
-            
-    
-            tile_layer_ca81343f0c5abadfeb489e48819054d8.addTo(map_130d20d345662911e8d0bc3c6442c9c0);
-        
-    
-                marker_81ab2416a19fa55e8db74fddabe7af9f.setIcon(icon_d3c7963d046ad6fdcba6cbcf1e91dfc0);
-            
-    
-                marker_4b466e4039bb3cff8e6265c11cf0e1e1.setIcon(icon_0f433368d0a9bd58f1cf8430ced4ad1d);
-            
-    
-                marker_b87da0db81ef35ef3430e50978e7ac6a.setIcon(icon_165941bbb2a06230b31d93eb4504f6f8);
-            
-    
-                marker_8e1446ffafd9ad213c757758ad7adb73.setIcon(icon_348c95c5e4b15ab5ce25ef72b8988b89);
-            
-    
-                marker_3cbeb1a321689672268f9e9eecf027fd.setIcon(icon_99c23d4618791c3e0a966a504e4444eb);
-            
-    
-                marker_b2dc0946f830eed7c1033f3f36c49354.setIcon(icon_5731f9aa5c370eec4a2bd8a9c3291aa0);
-            
-    
-                marker_63a322b19d40e9689ad350aabf9ab587.setIcon(icon_9c31b28cb0340d58460c870de9448430);
-            
-    
-                marker_f3712d9de1a1ea527cc9763cc03813bc.setIcon(icon_8b9c4293137d3842c7fcaa4ae2f4abdb);
-            
-    
-                marker_b6cfc875603b4a4b939a79d37cc03ef1.setIcon(icon_5c24db689afe1109a4084ceceacfcce2);
-            
-    
-                marker_efd3a9ec9d4c89e4f936e6abb5239a83.setIcon(icon_b1d70ea4c10ccd23fa96dbe14712bdad);
-            
-    
-                marker_baeb117b103f83ae5907b255e485e5cd.setIcon(icon_4140e7da0a92a841b3c22eda042db335);
-            
-    
-                marker_1b95b62c1c0458d508af75b2651a477f.setIcon(icon_7a8871ee264f916a06576375e56d874b);
-            
-    
-                marker_3add4d6fae5bc1e7e3305744cc2ba812.setIcon(icon_4ca2a0a64ae9ae5e7ca9db4e423b6e8b);
-            
-    
-                marker_3866052a7290337aebd04111eee14eb2.setIcon(icon_2bbf8e64ed67760fa39707a5c7d12136);
-            
-    
-                marker_9497df644951b43d335ca82f323b96e2.setIcon(icon_3615cb182a4ad84039bf74a60040e575);
-            
-    
-                marker_dda51e46b4f1c693a8deacc9eff697e1.setIcon(icon_c847ff180af9e0de3c331fe9cd3b4f30);
-            
-    
-                marker_f347f572d7d5fd478402b58d1192cd57.setIcon(icon_e0e9eff15403f0e9e730545de904043f);
-            
-    
-                marker_4f2d48efa7606bb473f763f72d14c630.setIcon(icon_94c53f1102aa30f586b35560f5090105);
-            
-    
-                marker_c967984fbf17e8af590427ad0ce9ed72.setIcon(icon_7be2f9ea5efa7c87f44cf793126c5a0b);
-            
-    
-                marker_7d9b787db492130e4ad8c99afb55c065.setIcon(icon_70b28279f66d844722b400ffa413c765);
-            
-    
-                marker_87d77b3a1b4025a636a4d510e0c083db.setIcon(icon_9559fadf1915387fb9fea94c2f31a642);
-            
-    
-                marker_5bde7ce03c4a80e1b8f6cefc413222d8.setIcon(icon_f854a218d9c8fbedb275174f1088447a);
-            
-    
-                marker_9ed779dac157c4e5ecb0583a88bcdbe5.setIcon(icon_706a69139732f62fa891019c57daba0c);
-            
-    
-                marker_58ed3998aa24cb09d7533df600aa8102.setIcon(icon_65d4610b5dff10fed2f1a7e62a8b835f);
-            
-    
-                marker_cf5fe4b05cc003c7b7190b29e763ef7e.setIcon(icon_ce6571ea91f079abf7c750f3ddfc535c);
-            
-    
-                marker_ddfd1134978214046539d01f9179b713.setIcon(icon_244e86a68590f852c6f68c27eebb58a7);
-            
-    
-                marker_47c3166c0c3e886463b52de7a6c430eb.setIcon(icon_0f43bfa7a4e5f89328f07c17fcdefa5a);
-            
-</script>
-</html>
+import folium
+
+# Crea la mappa centrata su Marrakech
+m = folium.Map(location=[31.63, -7.99], zoom_start=13)
+
+def create_popup_html(place_name, lat, lon):
+    """
+    Crea una stringa HTML per il popup,
+    con un link cliccabile che apre Google Maps sulle coordinate indicate.
+    """
+    gmaps_url = f"https://www.google.com/maps/search/?api=1&query={lat}%2C{lon}"
+    return f'<b>{place_name}</b><br><a href="{gmaps_url}" target="_blank">Apri su Google Maps</a>'
+
+# =============================================================================
+# 1) RIAD (icone colore blue, icon='home')
+# =============================================================================
+
+# Riad De Vinci & SPA
+lat, lon = 31.6345, -7.9922
+popup_html = create_popup_html("Riad De Vinci & SPA", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html, max_width=250),
+    tooltip="Riad De Vinci & SPA",
+    icon=folium.Icon(color='blue', icon='home', prefix='fa')
+).add_to(m)
+
+# Dar Daoud
+lat, lon = 31.6312, -7.9889
+popup_html = create_popup_html("Dar Daoud", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html, max_width=250),
+    tooltip="Dar Daoud",
+    icon=folium.Icon(color='blue', icon='home', prefix='fa')
+).add_to(m)
+
+# Riad 1001 couleurs
+lat, lon = 31.6374, -7.9910
+popup_html = create_popup_html("Riad 1001 couleurs", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html, max_width=250),
+    tooltip="Riad 1001 couleurs",
+    icon=folium.Icon(color='blue', icon='home', prefix='fa')
+).add_to(m)
+
+# Riad Minorisa
+lat, lon = 31.6318, -7.9927
+popup_html = create_popup_html("Riad Minorisa", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html, max_width=250),
+    tooltip="Riad Minorisa",
+    icon=folium.Icon(color='blue', icon='home', prefix='fa')
+).add_to(m)
+
+# =============================================================================
+# 2) ATTRAZIONI (icone colore red, icon='info-sign')
+# =============================================================================
+
+# Jemaa el-Fnaa
+lat, lon = 31.6258, -7.9891
+popup_html = create_popup_html("Jemaa el-Fnaa", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Jemaa el-Fnaa",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Moschea Koutoubia
+lat, lon = 31.6215, -7.9937
+popup_html = create_popup_html("Moschea Koutoubia", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Moschea Koutoubia",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Palazzo Bahia
+lat, lon = 31.6227, -7.9810
+popup_html = create_popup_html("Palazzo Bahia", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Palazzo Bahia",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Palazzo El Badi
+lat, lon = 31.6186, -7.9884
+popup_html = create_popup_html("Palazzo El Badi", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Palazzo El Badi",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Giardini Majorelle
+lat, lon = 31.6372, -8.0026
+popup_html = create_popup_html("Giardini Majorelle", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Giardini Majorelle",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Madrasa di Ben Youssef
+lat, lon = 31.6336, -7.9879
+popup_html = create_popup_html("Madrasa di Ben Youssef", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Madrasa di Ben Youssef",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Tombe Saadiane
+lat, lon = 31.6163, -7.9888
+popup_html = create_popup_html("Tombe Saadiane", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Tombe Saadiane",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Dar El Bacha
+lat, lon = 31.6333, -7.9966
+popup_html = create_popup_html("Dar El Bacha (Musée des Confluences)", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Dar El Bacha",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Museo YSL
+lat, lon = 31.6379, -8.0033
+popup_html = create_popup_html("Museo Yves Saint Laurent", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Museo YSL",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# La Menara
+lat, lon = 31.6082, -8.0159
+popup_html = create_popup_html("La Menara", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Giardini della Menara",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Quartiere Mellah
+lat, lon = 31.6196, -7.9819
+popup_html = create_popup_html("Quartiere Mellah", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Quartiere Mellah",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# Cyber Parc Arsat Moulay Abdeslam
+lat, lon = 31.6244, -8.0016
+popup_html = create_popup_html("Cyber Parc Arsat Moulay Abdeslam", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Cyber Parc Arsat Moulay Abdeslam",
+    icon=folium.Icon(color='red', icon='info-sign')
+).add_to(m)
+
+# =============================================================================
+# 3) DESERTI (icone colore gray, icon='flag')
+# =============================================================================
+
+# Deserto di Agafay
+lat, lon = 31.3075, -8.0331
+popup_html = create_popup_html("Deserto di Agafay", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Deserto di Agafay",
+    icon=folium.Icon(color='gray', icon='flag', prefix='fa')
+).add_to(m)
+
+# Zagora
+lat, lon = 30.3214, -5.8351
+popup_html = create_popup_html("Zagora", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Deserto di Zagora",
+    icon=folium.Icon(color='gray', icon='flag', prefix='fa')
+).add_to(m)
+
+# Merzouga (Erg Chebbi)
+lat, lon = 31.1000, -4.0000
+popup_html = create_popup_html("Merzouga (Erg Chebbi)", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Deserto di Merzouga",
+    icon=folium.Icon(color='gray', icon='flag', prefix='fa')
+).add_to(m)
+
+# =============================================================================
+# 4) RISTORANTI (icone colore green, icon='cutlery')
+# =============================================================================
+
+# Nomad
+lat, lon = 31.6298, -7.9874
+popup_html = create_popup_html("Nomad (cucina marocchina rivisitata)", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Nomad",
+    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
+).add_to(m)
+
+# Café Des Épices
+lat, lon = 31.6299, -7.9868
+popup_html = create_popup_html("Café Des Épices", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Café Des Épices",
+    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
+).add_to(m)
+
+# Le Jardin
+lat, lon = 31.6320, -7.9967
+popup_html = create_popup_html("Le Jardin", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Le Jardin",
+    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
+).add_to(m)
+
+# Café Clock
+lat, lon = 31.6157, -7.9891
+popup_html = create_popup_html("Café Clock (camel burger, menù creativo)", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Café Clock",
+    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
+).add_to(m)
+
+# Dar Zellij
+lat, lon = 31.6391, -7.9912
+popup_html = create_popup_html("Dar Zellij (cucina tradizionale in riad storico)", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Dar Zellij",
+    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
+).add_to(m)
+
+# La Famille
+lat, lon = 31.6234, -7.9841
+popup_html = create_popup_html("La Famille (cucina vegetariana/vegana)", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="La Famille",
+    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
+).add_to(m)
+
+# Naranj
+lat, lon = 31.6228, -7.9813
+popup_html = create_popup_html("Naranj (cucina libanese e marocchina)", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="Naranj",
+    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
+).add_to(m)
+
+# 16 Café
+lat, lon = 31.6333, -8.0104
+popup_html = create_popup_html("16 Café (pasticceria e caffè in Gueliz)", lat, lon)
+folium.Marker(
+    location=[lat, lon],
+    popup=folium.Popup(popup_html),
+    tooltip="16 Café",
+    icon=folium.Icon(color='green', icon='cutlery', prefix='fa')
+).add_to(m)
+
+# =============================================================================
+# VISUALIZZA / SALVA LA MAPPA
+# =============================================================================
+
+# Se sei in Jupyter/Colab, mostra la mappa interattiva:
+m
